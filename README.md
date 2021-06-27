@@ -9,6 +9,9 @@ This is a recent-edition build of CockroachDB for ARM64 devices, namely machines
 
 ## Running image (single instance with 20% memory cache)
 
+Note: This assumes you have a docker network named "proxy" and you're likely creating this on Docker Swarm/k8s.
+Adjust the docker service create statement to fit your environment/purpose.
+
 ```
 sudo mkdir /var/lib/cockroach
 sudo mkdir /var/lib/cockroach/data
