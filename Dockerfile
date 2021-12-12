@@ -3,9 +3,9 @@ RUN apt-get update
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y upgrade
 RUN apt-get -y install gcc cmake autoconf wget bison libncurses-dev
-RUN wget -qO- https://binaries.cockroachdb.com/cockroach-v20.2.15.src.tgz | tar  xvz
+RUN wget -qO- https://binaries.cockroachdb.com/cockroach-v21.1.0.src.tgz | tar  xvz
 RUN go version
-WORKDIR cockroach-v20.2.15
+WORKDIR cockroach-v21.1.0
 RUN make build
 RUN make install
 
