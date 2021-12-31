@@ -5,7 +5,7 @@
 This is a recent-edition build of CockroachDB for ARM64 devices, namely machines like RaspberryPI and PINE64 and similar boards with the ARM64v8 chipset.
 
 ## Docker Hub image available
-[Docker Hub](https://hub.docker.com/r/christoofar/cockroachdb-arm64) has the latest built image.
+[Docker Hub](https://hub.docker.com/r/christoofar/cockroachdb-arm64/tags?page=1&ordering=last_updated) has the latest built image.
 
 ## Running image (single instance with 20% memory cache)
 
