@@ -15,7 +15,7 @@ FROM prebuild as build
 RUN /bin/bash -c "mkdir -p $(go env GOPATH)/src/github.com/cockroachdb && \
     cd $(go env GOPATH)/src/github.com/cockroachdb"
 WORKDIR /go/src/github.com/cockroachdb
-RUN /bin/bash -c "git clone --branch v21.2.3 https://github.com/cockroachdb/cockroach"
+RUN /bin/bash -c "git clone --branch v21.2.4 https://github.com/cockroachdb/cockroach"
 WORKDIR /go/src/github.com/cockroachdb/cockroach
 RUN /bin/bash -c "git submodule update --init --recursive && make build && \
     	      make install"
