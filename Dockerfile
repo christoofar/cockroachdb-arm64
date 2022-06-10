@@ -26,6 +26,7 @@ WORKDIR /cockroach/
 ENV PATH=/cockroach:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 RUN mkdir -p /cockroach/ /usr/local/lib/cockroach /licenses /docker-entrypoint-initdb.d
 COPY --from=build /usr/local/bin/cockroach /cockroach/cockroach
+COPY --from=build /go/src/github.com/cockroachdb/cockroach/build/deploy/cockroach.sh /cockroach/cockroach.sh
 COPY --from=build /go/native/aarch64-linux-gnu/geos/lib/libgeos.so /go/native/aarch64-linux-gnu/geos/lib/libgeos_c.so /usr/local/lib/cockroach/
 EXPOSE 26257 8080
-ENTRYPOINT ["/cockroach/cockroach"]
+ENTRYPOINT ["/cockroach/cockroach.sh"]
